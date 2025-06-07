@@ -31,7 +31,7 @@
   padding: var(--pc-button-padding-block) var(--pc-button-padding-inline);
   background: var(--pc-button-bg);
   border: none;
-  border-radius: var(--p-border-radius-200);
+  border-radius: var(--p-border-radius-050);
   box-shadow: var(--pc-button-box-shadow);
   color: var(--pc-button-color);
   cursor: pointer;
@@ -119,11 +119,11 @@
   --pc-button-bg-gradient: var(--p-color-button-gradient-bg-fill);
   --pc-button-box-shadow: var(--p-shadow-button-primary);
   --pc-button-box-shadow_active: var(--p-shadow-button-primary-inset);
-  --pc-button-bg: var(--pc-button-bg-gradient), var(--p-color-bg-fill-brand);
+  --pc-button-bg: var(--pc-button-bg-gradient), var(--p-color-bg-inverse);
   --pc-button-bg_hover: var(--pc-button-bg-gradient),
-    var(--p-color-bg-fill-brand-hover);
+    var(--p-color-bg-fill-brand-selected);
   --pc-button-bg_active: var(--pc-button-bg-gradient),
-    var(--p-color-bg-fill-brand-active);
+    var(--p-color-bg-fill-brand);
   --pc-button-bg_disabled: var(--p-color-bg-fill-brand-disabled);
   --pc-button-color: var(--p-color-text-brand-on-bg-fill);
   --pc-button-color_disabled: var(--p-color-text-brand-on-bg-fill-disabled);
@@ -134,17 +134,19 @@
 .variantSecondary {
   --pc-button-box-shadow: var(--p-shadow-button);
   --pc-button-box-shadow_active: var(--p-shadow-button-inset);
-  --pc-button-bg: var(--p-color-bg-fill);
-  --pc-button-bg_hover: var(--p-color-bg-fill-hover);
-  --pc-button-bg_active: var(--p-color-bg-fill-active);
+  --pc-button-bg: var(--p-color-bg-surface-secondary);
+  --pc-button-bg_hover: var(--p-color-bg-surface-secondary-hover);
+  --pc-button-bg_active: var(--p-color-bg-surface-secondary-active);
   --pc-button-bg_pressed: var(--p-color-bg-fill-selected);
-  --pc-button-color: var(--p-color-text);
+  --pc-button-color: var(--p-color-text-brand);
   --pc-button-icon-fill: var(--p-color-icon);
 }
 
 .variantTertiary {
-  --pc-button-bg_hover: var(--p-color-bg-fill-transparent-hover);
-  --pc-button-bg_active: var(--p-color-bg-fill-transparent-active);
+  --pc-button-bg_hover: var(--p-color-bg-fill-hover);
+  --pc-button-bg_active: var(--p-color-bg-fill-active);
+  --pc-button-color_hover: var(--p-color-text-brand);
+  --pc-button-color_active: var(--p-color-text-brand);
   --pc-button-bg_pressed: var(--p-color-bg-fill-selected);
   --pc-button-bg_disabled: transparent;
   --pc-button-color: var(--p-color-text);
@@ -196,18 +198,18 @@
 .toneSuccess:is(.variantPrimary) {
   --pc-button-box-shadow: var(--p-shadow-button-primary-success);
   --pc-button-box-shadow_active: var(--p-shadow-button-primary-success-inset);
-  --pc-button-bg: var(--p-color-bg-fill-success);
+  --pc-button-bg: var(--p-color-bg-fill-success-active);
   --pc-button-bg_hover: var(--p-color-bg-fill-success-hover);
-  --pc-button-bg_active: var(--p-color-bg-fill-success-active);
+  --pc-button-bg_active: var(--p-color-bg-fill-success);
   --pc-button-bg_pressed: var(--p-color-bg-fill-success-selected);
 }
 
 .toneCritical:is(.variantPrimary) {
   --pc-button-box-shadow: var(--p-shadow-button-primary-critical);
   --pc-button-box-shadow_active: var(--p-shadow-button-primary-critical-inset);
-  --pc-button-bg: var(--p-color-bg-fill-critical);
+  --pc-button-bg: var(--p-color-bg-fill-critical-active);
   --pc-button-bg_hover: var(--p-color-bg-fill-critical-hover);
-  --pc-button-bg_active: var(--p-color-bg-fill-critical-active);
+  --pc-button-bg_active: var(--p-color-bg-fill-critical);
   --pc-button-bg_pressed: var(--p-color-bg-fill-critical-selected);
 }
 

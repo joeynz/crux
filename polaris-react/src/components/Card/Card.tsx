@@ -17,7 +17,7 @@ type Spacing = ResponsiveProp<SpaceScale>;
 export interface CardProps {
   children?: React.ReactNode;
   /** Background color
-   * @default 'bg-surface'
+   * @default 'bg-surface-secondary'
    */
   background?: ColorBackgroundAlias;
   /** The spacing around the card
@@ -35,18 +35,18 @@ export interface CardProps {
 
 export const Card = ({
   children,
-  background = 'bg-surface',
+  background = 'bg-surface-secondary',
   padding = {xs: '400'},
   roundedAbove = 'sm',
 }: CardProps) => {
   const breakpoints = useBreakpoints();
-  const defaultBorderRadius: BorderRadiusAliasOrScale = '300';
+  const defaultBorderRadius: BorderRadiusAliasOrScale = '100';
   const hasBorderRadius = Boolean(breakpoints[`${roundedAbove}Up`]);
 
   return (
     <WithinContentContext.Provider value>
       <ShadowBevel
-        boxShadow="100"
+        boxShadow="300"
         borderRadius={hasBorderRadius ? defaultBorderRadius : '0'}
         zIndex="32"
       >

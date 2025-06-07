@@ -6,7 +6,7 @@ import styles from './Divider.module.css';
 export interface DividerProps {
   /**
    * Divider border color
-   * @default 'border-secondary'
+   * @default 'border'
    */
   borderColor?: ColorBorderAlias | 'transparent';
   /**
@@ -17,7 +17,7 @@ export interface DividerProps {
 }
 
 export const Divider = ({
-  borderColor = 'border-secondary',
+  borderColor = 'border',
   borderWidth = '025',
 }: DividerProps) => {
   const borderColorValue =
